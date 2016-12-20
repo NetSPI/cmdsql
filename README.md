@@ -13,3 +13,14 @@ The cmdsql.aspx shell can be used for the following tasks.
 
 ###Notes###
 * The command execution code is based on the old cmd.aspx from fuzzdb - http://code.google.com/p/fuzzdb/
+
+###Screen Shots###
+* Operating system command execution.   
+![alt tag](https://blog.netspi.com/images/Antti_Powershell_Web_Config_Parsing.png)
+* Parse web.config files.   
+![alt tag](https://blog.netspi.com/images/Antti_Powershell_SQL_Query_Execution.png)
+* Execute MSSQL queries using recovered connection strings.   
+![alt tag](https://blog.netspi.com/images/Antti_Powershell_The_Code.png)
+
+
+
