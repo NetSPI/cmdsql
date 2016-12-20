@@ -1,13 +1,13 @@
-Web shell - Command execution, web.config parsing, and SQL query execution
+Name: cmdsql.aspx
+Author: Antti Rantasaari, NetSPI - 2013
+Stylesheets: Scott Sutherland (@nullbind)
+Blog: https://blog.netspi.com/adding-powershell-to-web-shells-to-get-database-access/
 
-Command execution - Run arbitrary Windows commands
+Description
+The cmdsql.aspx shell can be used for the following tasks.
+*Execute operating system commands
+*Parse web.config files for connection strings (based on root directory)
+*Execute MSSQL queries using connection strings recovered from web.config files
 
-Web.Config Parser - Extract db connection strings from web.configs (based on chosen root dir)
-
-SQL Query Execution - Execute arbitrary SQL queries (MSSQL only) based on extracted connection strings
-
-Antti - NetSPI - 2013
-
-Thanks to Scott (nullbind) for help and fancy stylesheets
-
-Based on old cmd.aspx from fuzzdb - http://code.google.com/p/fuzzdb/
+Note
+The command execution code is based on the old cmd.aspx from fuzzdb - http://code.google.com/p/fuzzdb/
