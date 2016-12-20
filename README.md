@@ -6,7 +6,7 @@
 
 ###Description###
 
-The cmdsql.aspx shell can be used for the following tasks.
+cmdsql.aspx is a webshell that can be used for the following tasks:
 * Execute operating system commands
 * Parse web.config files for connection strings (based on root directory)
 * Execute MSSQL queries using connection strings recovered from web.config files
